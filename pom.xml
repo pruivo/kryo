@@ -2,10 +2,34 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<packaging>jar</packaging>
+
 	<groupId>com.esotericsoftware</groupId>
 	<artifactId>kryo</artifactId>
-	<version>1.04</version>
+   <version>2.02</version>
+   <packaging>jar</packaging>
+   <name>Kryo</name>
+   <description>Fast, efficient Java serialization</description>
+   <url>http://code.google.com/p/kryo/</url>
+
+   <licenses>
+      <license>
+         <name>New BSD License</name>
+         <url>http://www.opensource.org/licenses/bsd-license.php</url>
+         <distribution>repo</distribution>
+      </license>
+   </licenses>
+
+   <developers>
+      <developer>
+         <id>nathan.sweet</id>
+         <name>Nathan Sweet</name>
+         <email>nathan.sweet@gmail.com</email>
+      </developer>
+   </developers>
+
+   <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+   </properties>
 
   <repositories>
     <repository>
@@ -33,7 +57,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.7</version>
+			<version>4.8.2</version>
 			<scope>test</scope>
 		 </dependency>
 	</dependencies>
