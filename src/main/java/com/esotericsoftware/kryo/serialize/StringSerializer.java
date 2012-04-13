@@ -6,6 +6,7 @@ import static com.esotericsoftware.minlog.Log.*;
 import java.nio.ByteBuffer;
 
 import com.esotericsoftware.kryo.Kryo;
+import com.esotericsoftware.kryo.SerializationException;
 import com.esotericsoftware.kryo.Serializer;
 
 /**
@@ -46,6 +47,11 @@ public class StringSerializer extends Serializer {
 
 	static public String get (ByteBuffer buffer) {
 		int charCount = IntSerializer.get(buffer, true);
+
+      if (charCount < 0) {
+         throw new SerializationException("Error during java deserialization");
+      }
+
 		char[] chars = Kryo.getContext().getCharArray(charCount);
 		int c, charIndex = 0;
 		while (charIndex < charCount) {
