@@ -3,5 +3,6 @@ Kryo is a fast and efficient object graph serialization framework for Java. The 
 --
 
 mavenized mirror of http://code.google.com/p/kryo/ (by wordrak https://github.com/wordrak/kryo)
+
 updated to 2.02 (by Pedro Ruivo)
 
